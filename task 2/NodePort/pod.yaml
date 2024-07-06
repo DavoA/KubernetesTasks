@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod-2
+  labels:
+    app: my-app-2
+  namespace: node-port
+spec:
+  containers:
+  - name: my-container-2
+    image: nginx
