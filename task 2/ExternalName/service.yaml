@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service-4
+  namespace: external-name
+spec:
+  type: ExternalName
+  externalName: https://2t7dlteg4bcrdnkevsxrinuqye0vwpzu.lambda-url.us-east-2.on.aws

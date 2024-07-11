@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod-4
+  labels:
+    app: my-app-4
+  namespace: external-name
+spec:
+  containers:
+  - name: my-container-4
+    image: nginx
