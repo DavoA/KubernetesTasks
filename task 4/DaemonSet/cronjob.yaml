@@ -1,0 +1,20 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: log-collector
+spec:
+  schedule: "*/3 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          nodeSelector:
+            app: nginx
+          containers:
+          - name: log-collector
+            image: busybox
+            command:
+            - /bin/sh
+            - -c
+            - "echo $(date) >> /var/log/collector.log"
+          restartPolicy: OnFailure
