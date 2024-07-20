@@ -8,8 +8,6 @@ spec:
     spec:
       template:
         spec:
-          nodeSelector:
-            app: nginx
           containers:
           - name: log-collector
             image: busybox
