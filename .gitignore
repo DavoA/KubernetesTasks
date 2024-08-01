@@ -1,0 +1,5 @@
+task 5/terraform/.terraform
+task 5/terraform/provider.tf
+task 5/terraform/.terraform.lock.hcl
+task 5/terraform/terraform.tfstate
+task 5/terraform/terraform.tfstate.backup

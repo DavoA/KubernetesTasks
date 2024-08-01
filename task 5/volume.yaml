@@ -1,15 +1,15 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: mongo-pv
+  name: nfs-pv
 spec:
   capacity:
     storage: 500Mi
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   nfs:
     path: /srv/nfs
-    server: 192.168.1.138
+    server: 3.145.12.219
 
 ---
 apiVersion: v1
@@ -18,7 +18,7 @@ metadata:
   name: mongo-pvc
 spec:
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   resources:
     requests:
       storage: 500Mi
